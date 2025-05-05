@@ -4,19 +4,17 @@ public class Drone implements Volant, Rechargeable {
     private int identifiant;
     private int autonomie;
     private double vitesseMax;
+    private static final int CONSOMMATION_PAR_VOL = 10;
 
-    // Passer par les setters pour mettre à jour les attributs
-    // JavaDoc
     public Drone(int identifiant, int autonomie, double vitesseMax) {
-        this.identifiant = identifiant;
-        this.autonomie = autonomie;
-        this.vitesseMax = vitesseMax;
+        setIdentifiant(identifiant);
+        setAutonomie(autonomie);
+        setVitesseMax(vitesseMax);
     }
 
-    // C'est mieux de créer une constante plutôt que d'utiliser une valeur numérique
     @Override
     public void voler() {
-        autonomie -= 10;
+        autonomie -= CONSOMMATION_PAR_VOL;
         System.out.println("Le drone " + identifiant + " vole à une vitesse maximale de " + vitesseMax + " km/h.");
     }
 
@@ -25,10 +23,9 @@ public class Drone implements Volant, Rechargeable {
         return this.vitesseMax;
     }
 
-    // Utiliser la valeur BATTERIE_INIT au lieu d'une valeur numérique
     @Override
     public void recharger() {
-        this.autonomie = 100;
+        this.autonomie = BATTERIE_INIT;
     }
 
     @Override

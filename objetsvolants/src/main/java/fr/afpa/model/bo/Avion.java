@@ -5,12 +5,10 @@ public class Avion implements Volant {
     private double vitesseMax;
     private int nbMoteurs;
 
-    // Passer par les setters pour mettre à jour les attributs
-    // JavaDoc
     public Avion(String modele, double vitesseMax, int nbMoteurs) {
-        this.modele = modele;
-        this.vitesseMax = vitesseMax;
-        this.nbMoteurs = nbMoteurs;
+        setModele(modele);
+        setVitesseMax(vitesseMax);
+        setNbMoteurs(nbMoteurs);
     }
 
     @Override
