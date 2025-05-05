@@ -13,6 +13,7 @@ public class Drone implements Volant, Rechargeable {
         this.vitesseMax = vitesseMax;
     }
 
+    // C'est mieux de créer une constante plutôt que d'utiliser une valeur numérique
     @Override
     public void voler() {
         autonomie -= 10;
@@ -24,6 +25,7 @@ public class Drone implements Volant, Rechargeable {
         return this.vitesseMax;
     }
 
+    // Utiliser la valeur BATTERIE_INIT au lieu d'une valeur numérique
     @Override
     public void recharger() {
         this.autonomie = 100;
