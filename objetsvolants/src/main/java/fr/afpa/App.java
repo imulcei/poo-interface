@@ -9,6 +9,9 @@ import fr.afpa.model.bo.Drone;
 import fr.afpa.model.bo.Rechargeable;
 
 public class App {
+
+    // ✅ Nickel
+    // Pense à JavaDoc
     public static void main(String[] args) {
 
         Avion avion1 = new Avion("A380", 1175, 4);

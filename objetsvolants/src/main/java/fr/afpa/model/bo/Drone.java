@@ -5,6 +5,8 @@ public class Drone implements Volant, Rechargeable {
     private int autonomie;
     private double vitesseMax;
 
+    // Passer par les setters pour mettre à jour les attributs
+    // JavaDoc
     public Drone(int identifiant, int autonomie, double vitesseMax) {
         this.identifiant = identifiant;
         this.autonomie = autonomie;
